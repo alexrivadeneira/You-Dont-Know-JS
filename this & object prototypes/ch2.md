@@ -153,7 +153,7 @@ obj1.obj2.foo(); // 42
 
 #### Implicitly Lost
 
-One of the most common frustrations that `this` binding creates is when an *implicitly bound* function loses that binding, which usually means it falls back to the *default binding*, of either the global object or `undefined`, depending on `strict mode`.
+The *implicit binding* rule doesn't apply when we create a reference to a function lookup on an object. In that case, `this` usually falls back to its *default binding* which is either the global object or `undefined` depending on `strict mode`.
 
 Consider:
 
